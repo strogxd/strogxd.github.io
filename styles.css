@@ -25,12 +25,3 @@ section {
 .track {
     margin: 15px 0;
 }
-
-footer {
-    background-color: #222;
-    color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
