@@ -25,3 +25,72 @@ section {
 .track {
     margin: 15px 0;
 }
+
+.youtube-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF0000; /* YouTube Red */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.youtube-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.youtube-button:active {
+    background-color: #b30000; /* Even darker red when clicked */
+}
+
+.spotify-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.spotify-button:hover {
+    background-color: #169141;
+    transform: scale(1.05);
+}
+
+.spotify-button:active {
+    background-color: black;
+    color: #1DB954; 
+    transform: scale(0.98);
+}
+
+.newgrounds-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #E49B0F;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.newgrounds-button:hover {
+    background-color: #a36f0b;
+    transform: scale(1.05);
+}
+
+.spotify-button:active {
+    background-color: black;
+    color: #855b0b;
+    transform: scale(0.98);
