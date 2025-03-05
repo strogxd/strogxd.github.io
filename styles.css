@@ -1,96 +1,193 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Body and general styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff; /* White text */
+    background: #1b1b1b; /* Dark background */
+    background-image: linear-gradient(120deg, #1b1b1b, #333);
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+    transform: scale(0.9); /* Keeps the page scaled down */
+}
+
+/* Header Styling */
 header {
-    background-color: #222;
-    color: white;
+    text-align: center;
+    margin-bottom: 40px;
     padding: 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background for header */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 1s ease-out forwards;
 }
 
-.track {
-    margin: 15px 0;
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #f4b400; /* Bright yellow-orange color for header title */
 }
 
-.youtube-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #FF0000; /* YouTube Red */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+header p {
+    font-size: 1.2em;
+    color: #ddd; /* Light gray for paragraph text */
+    margin-top: 10px;
 }
 
-.youtube-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+/* Section Styling */
+section {
+    margin: 40px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-.youtube-button:active {
-    background-color: #b30000; /* Even darker red when clicked */
+h2, h3 {
+    color: #f4b400; /* Bright yellow-orange color for section headers */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.spotify-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #1DB954; /* Spotify Green */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #ccc; /* Lighter gray text for normal content */
 }
 
-.spotify-button:hover {
-    background-color: #169141;
+/* Video Section */
+.video-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.video-container iframe {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.video-container iframe:hover {
     transform: scale(1.05);
 }
 
-.spotify-button:active {
-    background-color: black;
-    color: #1DB954; 
-    transform: scale(0.98);
-}
-
-.newgrounds-button {
+/* Social Buttons */
+.social-button {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #E49B0F;
-    color: white;
-    font-size: 18px;
+    padding: 12px 25px;
+    margin: 10px;
     font-weight: bold;
     text-decoration: none;
+    text-transform: uppercase;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease-out 0.7s forwards;
+    color: #fff; /* White text for social buttons */
 }
 
-.newgrounds-button:hover {
-    background-color: #a36f0b;
-    transform: scale(1.05);
+/* YouTube Button (Red and White) */
+.social-button.youtube {
+    background-color: #ff0000;
 }
 
-.spotify-button:active {
-    background-color: black;
-    color: #855b0b;
-    transform: scale(0.98);
+.social-button.youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-5px);
+}
+
+/* Spotify Button (Green and White) */
+.social-button.spotify {
+    background-color: #1db954;
+}
+
+.social-button.spotify:hover {
+    background-color: #1a9c45;
+    transform: translateY(-5px);
+}
+
+/* Newgrounds Button (Orange and White) */
+.social-button.newgrounds {
+    background-color: #ff6a00;
+}
+
+.social-button.newgrounds:hover {
+    background-color: #e65b00;
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+#contact a {
+    color: #f4b400; /* Yellow-orange color for the contact links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Slight black background for footer */
+    margin-top: 40px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 1s forwards;
+    color: #fff; /* White text for footer */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .video-container iframe {
+        width: 100%;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
